@@ -1,0 +1,53 @@
+
+.table {
+	-fx-pref-width: 1200px;
+	-fx-pref-height: 900px;
+	-fx-background-color: #266036;
+}
+
+.player-controller {
+	-fx-background-color: #193822;
+	-fx-font-weight: bold;
+	-fx-text-fill: #ffffff;
+	-fx-padding: 8px;
+}
+
+.player-name {
+	-fx-alignment: center;
+	-fx-text-fill: #ffffff;
+	-fx-font-weight: bold;
+	-fx-font-size: 2.4em;
+	-fx-valignment: center;
+}
+
+.card-slot {
+	-fx-pref-width: 128.0;
+	-fx-pref-height: 185.5621;
+	-fx-background-color: #193822;
+}
+
+.deck {
+	-fx-alignment: center;
+}
+
+.compare-button {
+	-fx-padding: 8px;
+	-fx-border-insets: 8px;
+	-fx-background-insets: 8px;
+}
+
+.outcome-box {
+	-fx-spacing: 8px;
+	-fx-alignment: center;
+}
+
+.outcome {
+	-fx-text-fill: #ffffff;
+	-fx-font-weight: bold;
+	-fx-font-size: 1.1em;
+}
+
+.outcome-detail {
+	-fx-text-fill: #ffffff;
+	
+}
