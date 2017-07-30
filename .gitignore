@@ -22,7 +22,6 @@
 hs_err_pid*
 
 # Netbeans related files
-nbactions.xml
 nb-*.xml
 
 # Directories
