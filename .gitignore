@@ -25,6 +25,5 @@ hs_err_pid*
 nbactions.xml
 nb-*.xml
 
-
 # Directories
 target
