@@ -17,6 +17,7 @@ public class TableController extends BorderPane {
 	private final CardSetController opponentCardSet = new CardSetController();
 	private final CardSetController playerCardSet = new CardSetController();
 	private final DeckController deckController = new DeckController();
+	private final Object actionLock = new Object();
 	
 	public TableController(GameService gameService) {
 		this.gameService = gameService;
@@ -50,18 +51,22 @@ public class TableController extends BorderPane {
 	}
 	
 	private void onNewDeal(DealEvent evt) {
-		playerController.clearOutcome();
-		gameService.deal();
-		playerCardSet.setCards(player.getCards());
-		opponentCardSet.setCards(opponent.getCards());
-		playerCardSet.exposeAll();
+		synchronized(actionLock) {
+			playerController.clearOutcome();
+			gameService.deal();
+			playerCardSet.setCards(player.getCards());
+			opponentCardSet.setCards(opponent.getCards());
+			playerCardSet.exposeAll();
+		}
 	}
 	
 	private void onComparison(ComparisonEvent evt) {
-		DetailedOutcome outcome = gameService.compare();
-		opponentCardSet.exposeAll();
-		playerCardSet.exposeAll();
-		playerController.setOutcome(outcome);
+		synchronized(actionLock) {
+			DetailedOutcome outcome = gameService.compare();
+			opponentCardSet.exposeAll();
+			playerCardSet.exposeAll();
+			playerController.setOutcome(outcome);
+		}
 	}
 	
 }

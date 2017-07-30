@@ -45,6 +45,7 @@ public class GameService {
 	}
 	
 	public void deal() {
+		deck.reset();
 		player.clearHand();
 		opponent.clearHand();
 		for(int i = 0; i < Player.MAX_CARD_COUNT; i++) {
