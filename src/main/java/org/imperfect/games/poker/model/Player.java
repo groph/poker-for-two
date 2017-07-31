@@ -1,6 +1,7 @@
 package org.imperfect.games.poker.model;
 
 import java.util.Arrays;
+import java.util.Collection;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -8,7 +9,7 @@ public class Player {
 	
 	public static final int MAX_CARD_COUNT = 5;
 	private final Card[] cardArray = new Card[MAX_CARD_COUNT];
-	private final Iterable<Card> cards = Arrays.asList(cardArray);
+	private final Collection<Card> cards = Arrays.asList(cardArray);
 	private final StringProperty name = new SimpleStringProperty("");
 	
 	public Player() {
@@ -31,7 +32,7 @@ public class Player {
 		return name;
 	}
 	
-	public Iterable<Card> getCards() {
+	public Collection<Card> getCards() {
 		return cards;
 	}
 	

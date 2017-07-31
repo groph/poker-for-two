@@ -1,6 +1,5 @@
 package org.imperfect.games.poker;
 
-import java.util.ResourceBundle;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.scene.Parent;

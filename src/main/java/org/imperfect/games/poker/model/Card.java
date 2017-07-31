@@ -14,8 +14,8 @@ public final class Card {
 		return suit;
 	}
 	
-	public Value getValue() {
-		return value;
+	public int getStrength() {
+		return value.strength;
 	}
 	
 	@Override
